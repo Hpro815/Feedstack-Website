@@ -16,8 +16,10 @@ export const metadata: Metadata = {
 }
 
 const sectionHeading = 'text-xl md:text-2xl font-bold mb-4 mt-12'
+const subHeading = 'text-base font-semibold mt-6 mb-2'
 const paragraph = 'text-sm md:text-base leading-relaxed mb-4'
 const listItem = 'text-sm md:text-base leading-relaxed'
+const linkStyle = { color: '#8A82FF' }
 
 export default function PrivacyPolicyPage() {
   return (
@@ -29,147 +31,185 @@ export default function PrivacyPolicyPage() {
             className="text-3xl md:text-4xl font-bold mb-2 text-[#F0F0FF]"
             style={{ fontFamily: 'Space Grotesk, sans-serif' }}
           >
-            Privacy Policy
+            Feedstack Privacy Policy
           </h1>
           <p className="text-sm mb-10" style={{ color: '#888899', fontFamily: 'Inter, sans-serif' }}>
-            Last updated: July 17, 2026
+            Last updated: July 2026
           </p>
 
           <div style={{ color: '#B8B8C8', fontFamily: 'Inter, sans-serif' }}>
             <p className={paragraph}>
-              This Privacy Policy explains what information Feedstack ("we", "us") collects
-              through the feedstack.app website and the Feedstack Android app, and how that
-              information is used. Feedstack does not require an account, and the app does not
-              show ads.
+              Feedstack ("we", "our", "the app") is built with privacy as a core principle. This
+              policy explains what data the app does and does not collect.
             </p>
 
             <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              1. Information We Collect
+              Our Core Commitment
             </h2>
-
-            <h3 className="text-base font-semibold mt-6 mb-2" style={{ color: '#F0F0FF' }}>
-              The Feedstack app
-            </h3>
             <p className={paragraph}>
-              Feedstack does not require you to create an account. The habits, links, and streak
-              data you add are stored locally on your device and are not uploaded to or stored on
-              our servers.
+              Feedstack does not require an account, does not collect personal data, and does not
+              use advertising. The habits, links, streaks, and reminders you create are stored
+              locally on your device.
             </p>
 
-            <h3 className="text-base font-semibold mt-6 mb-2" style={{ color: '#F0F0FF' }}>
-              This website
-            </h3>
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Information We Do Not Collect
+            </h2>
+            <p className={paragraph}>We do not collect, store, or have access to:</p>
             <ul className="list-disc pl-5 flex flex-col gap-2 mb-4">
-              <li className={listItem}>
-                <strong>Analytics.</strong> We use Google Analytics to understand how visitors use
-                this website, including pages viewed, general device/browser type, and
-                approximate location derived from IP address. Google Analytics does not identify
-                you by name.
-              </li>
-              <li className={listItem}>
-                <strong>Referral links.</strong> If you arrive at feedstack.app through a
-                creator's referral link (e.g. feedstack.app/creatorname), we log the referral
-                name, timestamp, browser user agent, and general country location. This is used
-                only to measure which referral links are driving traffic and does not identify
-                you personally.
-              </li>
+              <li className={listItem}>Your name, email address, or contact information</li>
+              <li className={listItem}>The content of the links you save as habits</li>
+              <li className={listItem}>Your habit history, streaks, or completion data</li>
+              <li className={listItem}>Your location</li>
+              <li className={listItem}>Your browsing activity outside the app</li>
+              <li className={listItem}>Any biometric or health data</li>
             </ul>
 
             <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              2. How We Use Information
+              Information Stored On Your Device
             </h2>
             <p className={paragraph}>
-              Information collected through analytics and referral tracking is used solely to
-              understand website traffic, measure the performance of referral links, and improve
-              Feedstack. We do not sell your information.
+              The following information is stored locally on your device only, and is never
+              transmitted to us:
+            </p>
+            <ul className="list-disc pl-5 flex flex-col gap-2 mb-4">
+              <li className={listItem}>
+                The links (YouTube, TikTok, Instagram, X, Reddit, Spotify, articles, or any other
+                URL) you add as habits
+              </li>
+              <li className={listItem}>Habit names, categories, and reminder times you set</li>
+              <li className={listItem}>Your streak history and completion records</li>
+              <li className={listItem}>Your app preferences and settings</li>
+            </ul>
+            <p className={paragraph}>
+              If you delete the app, this data is permanently removed from your device.
             </p>
 
             <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              3. Third Parties
+              Optional Features That Involve Data Sharing
             </h2>
+
+            <h3 className={subHeading} style={{ color: '#F0F0FF' }}>
+              Streak Buddies
+            </h3>
+            <p className={paragraph}>
+              If you choose to use the Streak Buddies feature, you create a username, and this
+              username along with the streak count for habits you choose to share becomes visible
+              to the specific person you connect with. No other personal data is shared through
+              this feature. You can stop using this feature at any time in Settings.
+            </p>
+
+            <h3 className={subHeading} style={{ color: '#F0F0FF' }}>
+              Waitlist and Email Communications
+            </h3>
+            <p className={paragraph}>
+              If you sign up for our waitlist on feed-stack.com, we collect your email address
+              solely to send you launch updates and, if applicable, a discount code. You can
+              unsubscribe at any time using the link in any email we send.
+            </p>
+
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Third-Party Services
+            </h2>
+            <p className={paragraph}>
+              Feedstack uses the following third-party services strictly for their intended
+              purpose:
+            </p>
             <ul className="list-disc pl-5 flex flex-col gap-2 mb-4">
               <li className={listItem}>
-                <strong>Google Analytics</strong> — website analytics. See Google's privacy policy
-                at{' '}
+                <strong>RevenueCat</strong>, to manage subscription purchases. RevenueCat receives
+                your device's purchase transaction data as required by Apple and Google to
+                validate purchases. See RevenueCat's privacy policy at{' '}
                 <a
-                  href="https://policies.google.com/privacy"
+                  href="https://www.revenuecat.com/privacy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
-                  style={{ color: '#8A82FF' }}
+                  style={linkStyle}
                 >
-                  policies.google.com/privacy
-                </a>
-                .
+                  revenuecat.com/privacy
+                </a>{' '}
+                for details.
               </li>
               <li className={listItem}>
-                <strong>Supabase</strong> — stores anonymous referral-link visit records
-                (referral name, timestamp, user agent, country) described above.
-              </li>
-              <li className={listItem}>
-                <strong>Google Play</strong> — the Feedstack app is distributed through the Google
-                Play Store, which has its own privacy practices.
+                <strong>Apple App Store and Google Play</strong>, to process payments for Pro
+                subscriptions and the Lifetime deal. We do not have access to your payment card
+                details at any point.
               </li>
             </ul>
-
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              4. Data Retention
-            </h2>
             <p className={paragraph}>
-              Referral-link visit records are retained only as long as needed to measure referral
-              performance. Analytics data is retained according to Google Analytics' standard
-              retention settings.
+              We do not use third-party advertising networks, analytics trackers, or data brokers
+              of any kind.
             </p>
 
             <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              5. Your Choices
+              No Advertising
             </h2>
             <p className={paragraph}>
-              You can use your browser's settings, extensions, or Google's{' '}
+              Feedstack does not display ads and does not share any data with advertising
+              networks.
+            </p>
+
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Children's Privacy
+            </h2>
+            <p className={paragraph}>
+              Feedstack is not directed at children under 13, and we do not knowingly collect any
+              information from children.
+            </p>
+
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Data Security
+            </h2>
+            <p className={paragraph}>
+              Because your habit data stays on your device rather than on our servers, there is no
+              central database of user habit data that could be exposed in a breach. Purchase and
+              subscription data is handled securely by Apple, Google, and RevenueCat in accordance
+              with their own security standards.
+            </p>
+
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Your Rights
+            </h2>
+            <p className={paragraph}>
+              Since we do not hold personal data beyond an optional waitlist email address, there
+              is little for us to access, correct, or delete on your behalf. If you signed up for
+              the waitlist and want your email removed, contact us using the details below and we
+              will delete it promptly.
+            </p>
+
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Changes to This Policy
+            </h2>
+            <p className={paragraph}>
+              If this policy changes, we will update the "Last updated" date at the top of this
+              page. Continued use of the app after changes are posted constitutes acceptance of
+              the updated policy.
+            </p>
+
+            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
+              Contact Us
+            </h2>
+            <p className={paragraph}>
+              If you have any questions about this privacy policy, contact us at:
+            </p>
+            <p className={paragraph}>
               <a
-                href="https://tools.google.com/dlpage/gaoptout"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
+                href="mailto:feedstack84@gmail.com"
+                className="underline font-semibold"
                 style={{ color: '#8A82FF' }}
               >
-                Analytics opt-out
-              </a>{' '}
-              to limit analytics tracking on this website. Since the Feedstack app stores your
-              data locally, uninstalling the app removes your habit and streak data from your
-              device.
-            </p>
-
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              6. Children's Privacy
-            </h2>
-            <p className={paragraph}>
-              Feedstack is not directed at children under 13, and we do not knowingly collect
-              information from children under 13.
-            </p>
-
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              7. Changes to This Policy
-            </h2>
-            <p className={paragraph}>
-              We may update this Privacy Policy from time to time. Changes will be posted on this
-              page with an updated "Last updated" date.
-            </p>
-
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              8. Contact Us
-            </h2>
-            <p className={paragraph}>
-              If you have questions about this Privacy Policy, contact us at{' '}
-              <a
-                href="mailto:Feedstack84@gmail.com"
-                className="underline"
-                style={{ color: '#8A82FF' }}
-              >
-                Feedstack84@gmail.com
+                feedstack84@gmail.com
               </a>
-              .
             </p>
+
+            <div className="pt-8 mt-8" style={{ borderTop: '1px solid rgba(108,99,255,0.12)' }}>
+              <p className="text-sm italic" style={{ color: '#888899' }}>
+                Feedstack. Turn any link into a daily habit.
+                <br />
+                feed-stack.com
+              </p>
+            </div>
           </div>
         </div>
       </section>
