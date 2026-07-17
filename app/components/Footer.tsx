@@ -91,7 +91,7 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               {[
-                { label: 'Privacy Policy', href: '/privacy' },
+                { label: 'Privacy Policy', href: '/privacy-policy' },
                 { label: 'Terms of Service', href: '/terms' },
               ].map((link) => (
                 <li key={link.label}>

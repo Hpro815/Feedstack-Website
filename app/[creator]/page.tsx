@@ -4,6 +4,7 @@ import { getSupabaseClient } from '@/lib/supabase'
 
 const EXCLUDED_ROUTES = [
   'privacy',
+  'privacy-policy',
   'terms',
   'about',
   'admin',
