@@ -33,12 +33,6 @@ export default function WaitlistPage() {
     >
       {/* Minimal navbar */}
       <nav className="flex items-center justify-between px-6 py-4 w-full">
-        <Link href="/" className="flex items-center gap-2.5">
-          <AppIcon size={30} />
-          <span style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: '17px' }}>
-            Feedstack
-          </span>
-        </Link>
         <Link
           href="/"
           className="flex items-center gap-1.5 text-sm font-medium transition-all duration-200 hover:-translate-x-0.5"
@@ -56,6 +50,12 @@ export default function WaitlistPage() {
             <path d="M9 11L5 7L9 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           Back
+        </Link>
+        <Link href="/" className="flex items-center gap-2.5">
+          <AppIcon size={30} />
+          <span style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: '17px' }}>
+            Feedstack
+          </span>
         </Link>
       </nav>
 
