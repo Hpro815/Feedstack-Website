@@ -56,6 +56,18 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/waitlist"
+            className="text-sm font-semibold rounded-xl px-4 py-2 transition-all duration-200 hover:-translate-y-px"
+            style={{
+              background: 'rgba(62,207,142,0.12)',
+              border: '1px solid rgba(62,207,142,0.25)',
+              color: '#3ecf8e',
+              fontFamily: 'Space Grotesk, sans-serif',
+            }}
+          >
+            Join Waitlist
+          </a>
         </div>
 
         {/* CTA */}
@@ -111,6 +123,7 @@ export default function Navbar() {
             { label: 'How it works', href: '#how-it-works' },
             { label: 'Why Feedstack', href: '#why-feedstack' },
             { label: 'Reviews', href: '#reviews' },
+            { label: 'Join Waitlist', href: '/waitlist' },
           ].map((link) => (
             <a
               key={link.href}

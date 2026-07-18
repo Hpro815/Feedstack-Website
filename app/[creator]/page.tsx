@@ -9,6 +9,7 @@ const EXCLUDED_ROUTES = [
   'about',
   'admin',
   'api',
+  'waitlist',
   'favicon.ico',
   'robots.txt',
   'sitemap.xml',
