@@ -104,27 +104,29 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Modern curved arrow pointing up-right to Join Waitlist */}
-          <div style={{ position: 'relative', width: '90px', height: '70px', flexShrink: 0 }}>
-            <svg width="90" height="70" viewBox="0 0 90 70" fill="none">
-              <path
-                d="M10 65 C15 40 50 15 78 8"
-                stroke="#6C63FF"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                fill="none"
-              />
-              <path
-                d="M68 4 L80 7 L76 18"
-                stroke="#6C63FF"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
-          </div>
         </motion.div>
+
+        {/* Waitlist CTA under pricing banner */}
+        <motion.a
+          custom={0.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          href="/waitlist"
+          className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 -mt-4 mb-8 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
+          style={{
+            background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
+            color: '#F0F0FF',
+            fontFamily: 'Space Grotesk, sans-serif',
+            boxShadow: '0 4px 20px rgba(108,99,255,0.35)',
+            textDecoration: 'none',
+          }}
+        >
+          Claim 60% off
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </motion.a>
 
         {/* H1 */}
         <motion.h1
