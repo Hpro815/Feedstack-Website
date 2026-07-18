@@ -102,31 +102,26 @@ export default function Hero() {
             >
               60% OFF
             </span>
+            <div style={{ width: '1px', height: '24px', background: 'rgba(108,99,255,0.3)' }} />
+            <a
+              href="/waitlist"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:opacity-80"
+              style={{
+                background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
+                color: '#F0F0FF',
+                borderRadius: '10px',
+                padding: '6px 14px',
+                textDecoration: 'none',
+              }}
+            >
+              Claim 60% off
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path d="M2.5 6.5h8M7 3.5l3 3-3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
 
         </motion.div>
-
-        {/* Waitlist CTA under pricing banner */}
-        <motion.a
-          custom={0.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          href="/waitlist"
-          className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 -mt-4 mb-8 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5"
-          style={{
-            background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
-            color: '#F0F0FF',
-            fontFamily: 'Space Grotesk, sans-serif',
-            boxShadow: '0 4px 20px rgba(108,99,255,0.35)',
-            textDecoration: 'none',
-          }}
-        >
-          Claim 60% off
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </motion.a>
 
         {/* H1 */}
         <motion.h1
