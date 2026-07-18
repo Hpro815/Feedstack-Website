@@ -32,7 +32,7 @@ export default function WaitlistPage() {
       style={{ background: '#0A0A0F', color: '#F0F0FF', fontFamily: 'Inter, sans-serif' }}
     >
       {/* Minimal navbar */}
-      <nav className="flex items-center justify-between px-6 py-4 max-w-5xl mx-auto w-full">
+      <nav className="flex items-center justify-between px-6 py-4 w-full">
         <Link href="/" className="flex items-center gap-2.5">
           <AppIcon size={30} />
           <span style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, fontSize: '17px' }}>
