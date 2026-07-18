@@ -67,11 +67,19 @@ export default function Waitlist() {
               lineHeight: 1.1,
             }}
           >
-            Join the waitlist
+            Join the waitlist &amp; get{' '}
+            <span style={{
+              background: 'linear-gradient(135deg, #6C63FF 0%, #3ecf8e 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}>
+              60% off
+            </span>
           </h2>
 
           <p
-            className="mb-10"
+            className="mb-6"
             style={{
               fontFamily: 'Inter, sans-serif',
               color: '#888899',
@@ -79,8 +87,11 @@ export default function Waitlist() {
               lineHeight: 1.7,
             }}
           >
-            Be the first to know about new features, creator challenges, and
-            exclusive early access drops.
+            Waitlist members lock in Lifetime Pro for{' '}
+            <span style={{ color: '#F0F0FF', fontWeight: 600 }}>$14.99</span>
+            {' '}instead of the full{' '}
+            <span style={{ textDecoration: 'line-through', color: '#666677' }}>$25</span>
+            . One-time payment, yours forever.
           </p>
 
           <AnimatePresence mode="wait">
