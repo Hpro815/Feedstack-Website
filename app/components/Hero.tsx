@@ -113,20 +113,28 @@ export default function Hero() {
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-lg"
+            className="inline-flex items-center justify-center gap-2.5 text-base font-semibold rounded-2xl px-6 py-3 transition-all duration-200 hover:-translate-y-px"
+            style={{
+              background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
+              boxShadow: '0 4px 20px rgba(108,99,255,0.4)',
+              color: '#F0F0FF',
+              fontFamily: 'Space Grotesk, sans-serif',
+              minWidth: '210px',
+            }}
             aria-label="Download Feedstack free on Google Play Store"
           >
-            <GooglePlayLogo size={22} />
-            Download Free on Android
+            <GooglePlayLogo size={20} />
+            Free on Android
           </a>
           <a
             href="/waitlist"
-            className="inline-flex items-center gap-2.5 text-base font-semibold rounded-2xl px-6 py-3 transition-all duration-200 hover:-translate-y-px"
+            className="inline-flex items-center justify-center gap-2.5 text-base font-semibold rounded-2xl px-6 py-3 transition-all duration-200 hover:-translate-y-px"
             style={{
               background: 'rgba(255,255,255,0.06)',
               border: '1px solid rgba(255,255,255,0.14)',
               color: '#F0F0FF',
               fontFamily: 'Space Grotesk, sans-serif',
+              minWidth: '210px',
             }}
             aria-label="Join waitlist for iOS"
           >
