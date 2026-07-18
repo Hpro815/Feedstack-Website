@@ -107,6 +107,36 @@ export default function Hero() {
           </span>
         </motion.div>
 
+        {/* Arrow pointing to Join Waitlist */}
+        <motion.div
+          custom={0.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          className="flex items-center justify-center gap-2 mb-2 -mt-4"
+          style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+        >
+          <svg width="54" height="36" viewBox="0 0 54 36" fill="none">
+            <path
+              d="M4 32 C10 32 20 10 46 6"
+              stroke="#6C63FF"
+              strokeWidth="2"
+              strokeLinecap="round"
+              fill="none"
+              strokeDasharray="4 3"
+            />
+            <path
+              d="M38 2 L48 6 L42 14"
+              stroke="#6C63FF"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+          </svg>
+          <span style={{ fontSize: '12px', color: '#6C63FF', fontWeight: 600 }}>Join Waitlist</span>
+        </motion.div>
+
         {/* H1 */}
         <motion.h1
           custom={0}
