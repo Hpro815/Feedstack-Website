@@ -120,11 +120,18 @@ export default function Hero() {
               </svg>
             </a>
           </div>
-          <p style={{ fontSize: '11px', color: '#555566', marginTop: '8px', fontFamily: 'Inter, sans-serif' }}>
-            * The 60% off offer is for the iOS app only
-          </p>
 
         </motion.div>
+
+        <motion.p
+          custom={0.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          style={{ fontSize: '11px', color: '#555566', marginTop: '-20px', marginBottom: '24px', fontFamily: 'Inter, sans-serif' }}
+        >
+          * The 60% off offer is for the iOS app only
+        </motion.p>
 
         {/* H1 */}
         <motion.h1
