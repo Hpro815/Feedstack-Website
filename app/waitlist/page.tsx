@@ -72,21 +72,6 @@ export default function WaitlistPage() {
       <main className="relative flex-1 flex flex-col items-center justify-center px-6 py-16 text-center">
         <div className="max-w-2xl mx-auto w-full flex flex-col items-center">
 
-          {/* Badge */}
-          <motion.div
-            custom={0} variants={fadeUp} initial="hidden" animate="show"
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 text-xs font-semibold"
-            style={{
-              background: 'rgba(62,207,142,0.1)',
-              border: '1px solid rgba(62,207,142,0.25)',
-              color: '#3ecf8e',
-              fontFamily: 'Space Grotesk, sans-serif',
-            }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#3ecf8e] animate-pulse inline-block" />
-            Waitlist offer · Limited spots
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             custom={1} variants={fadeUp} initial="hidden" animate="show"
