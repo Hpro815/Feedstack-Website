@@ -39,8 +39,23 @@ export default function WaitlistPage() {
             Feedstack
           </span>
         </Link>
-        <Link href="/" className="text-sm transition-colors hover:text-[#F0F0FF]" style={{ color: '#888899' }}>
-          ← Back
+        <Link
+          href="/"
+          className="flex items-center gap-1.5 text-sm font-medium transition-all duration-200 hover:-translate-x-0.5"
+          style={{
+            color: '#888899',
+            background: 'rgba(108,99,255,0.08)',
+            border: '1px solid rgba(108,99,255,0.18)',
+            borderRadius: '10px',
+            padding: '6px 14px',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.color = '#F0F0FF')}
+          onMouseLeave={e => (e.currentTarget.style.color = '#888899')}
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M9 11L5 7L9 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          Back
         </Link>
       </nav>
 
