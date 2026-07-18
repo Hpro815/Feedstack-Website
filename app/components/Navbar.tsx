@@ -70,38 +70,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* CTAs */}
-        <div className="hidden md:flex items-center gap-2">
-          <a
-            href="/waitlist"
-            className="inline-flex items-center gap-2 text-sm font-semibold rounded-xl px-5 py-2.5 transition-all duration-200 hover:-translate-y-px"
-            style={{
-              background: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.12)',
-              color: '#F0F0FF',
-              fontFamily: 'Space Grotesk, sans-serif',
-            }}
-            aria-label="Join waitlist for iOS"
-          >
-            <AppStoreLogo size={16} />
-            iOS Waitlist
-          </a>
-          <a
-            href={PLAY_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#F0F0FF] rounded-xl px-5 py-2.5 transition-all duration-200 hover:-translate-y-px"
-            style={{
-              background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
-              boxShadow: '0 4px 16px rgba(108,99,255,0.35)',
-              fontFamily: 'Space Grotesk, sans-serif',
-            }}
-            aria-label="Download Feedstack free on Google Play"
-          >
-            <GooglePlayLogo size={16} />
-            Free on Android
-          </a>
-        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -153,24 +121,14 @@ export default function Navbar() {
           <a
             href="/waitlist"
             onClick={() => setMenuOpen(false)}
-            className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors"
+            className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors mt-2"
             style={{
-              background: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.12)',
-              color: '#F0F0FF',
+              background: 'rgba(62,207,142,0.12)',
+              border: '1px solid rgba(62,207,142,0.25)',
+              color: '#3ecf8e',
             }}
           >
-            <AppStoreLogo size={18} />
-            iOS Waitlist
-          </a>
-          <a
-            href={PLAY_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-center justify-center mt-2"
-          >
-            <GooglePlayLogo size={18} />
-            Free on Android
+            Join Waitlist
           </a>
         </motion.div>
       )}

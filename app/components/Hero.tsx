@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { AppStoreLogo } from './Navbar'
 
 const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.feedstack.app'
@@ -119,16 +120,34 @@ export default function Hero() {
             Download Free on Android
           </a>
           <a
-            href="#how-it-works"
-            className="inline-flex items-center gap-2 text-[#888899] hover:text-[#F0F0FF] transition-colors text-base font-medium"
-            style={{ fontFamily: 'Inter, sans-serif' }}
+            href="/waitlist"
+            className="inline-flex items-center gap-2.5 text-base font-semibold rounded-2xl px-6 py-3 transition-all duration-200 hover:-translate-y-px"
+            style={{
+              background: 'rgba(255,255,255,0.06)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              color: '#F0F0FF',
+              fontFamily: 'Space Grotesk, sans-serif',
+            }}
+            aria-label="Join waitlist for iOS"
           >
-            See how it works
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <AppStoreLogo size={20} />
+            Get it on iOS
           </a>
         </motion.div>
+        <motion.a
+          custom={2.5}
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          href="#how-it-works"
+          className="inline-flex items-center gap-2 text-[#888899] hover:text-[#F0F0FF] transition-colors text-base font-medium mb-16"
+          style={{ fontFamily: 'Inter, sans-serif' }}
+        >
+          See how it works
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </motion.a>
 
         {/* Phone mockup */}
         <motion.div
