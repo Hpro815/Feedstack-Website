@@ -62,13 +62,14 @@ export default function Hero() {
           style={{ position: 'relative' }}
         >
           <div
-            className="inline-flex items-center gap-3 rounded-2xl px-6 py-3"
+            className="inline-flex flex-col items-center gap-2 rounded-2xl px-6 py-4"
             style={{
               background: 'rgba(108,99,255,0.1)',
               border: '1px solid rgba(108,99,255,0.25)',
               fontFamily: 'Space Grotesk, sans-serif',
             }}
           >
+          <div className="inline-flex items-center gap-3">
             <span style={{ color: '#888899', fontSize: '15px' }}>Lifetime Pro</span>
             <span style={{ fontSize: '22px', fontWeight: 800, color: '#555566', textDecoration: 'line-through' }}>
               $25
@@ -120,18 +121,12 @@ export default function Hero() {
               </svg>
             </a>
           </div>
+          <p style={{ fontSize: '11px', color: '#6b6b80', fontFamily: 'Inter, sans-serif', margin: 0 }}>
+            * The 60% off offer is for the iOS app only
+          </p>
+          </div>
 
         </motion.div>
-
-        <motion.p
-          custom={0.5}
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          style={{ fontSize: '11px', color: '#555566', marginTop: '-20px', marginBottom: '24px', fontFamily: 'Inter, sans-serif' }}
-        >
-          * The 60% off offer is for the iOS app only
-        </motion.p>
 
         {/* H1 */}
         <motion.h1
