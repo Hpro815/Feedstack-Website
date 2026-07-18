@@ -120,6 +120,9 @@ export default function Hero() {
               </svg>
             </a>
           </div>
+          <p style={{ fontSize: '11px', color: '#555566', marginTop: '8px', fontFamily: 'Inter, sans-serif' }}>
+            * The 60% off offer is for the iOS app only
+          </p>
 
         </motion.div>
 
