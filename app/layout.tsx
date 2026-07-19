@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Feedstack - Turn Any YouTube Video Into a Daily Habit',
     description:
       'Turn any YouTube video or X post into a daily habit reminder with streak tracking. Free on Android.',
