@@ -102,7 +102,7 @@ export default function WaitlistPage() {
             className="mb-12"
             style={{ color: '#888899', fontSize: 'clamp(15px, 2vw, 18px)', maxWidth: '460px' }}
           >
-            For the <span style={{ color: '#F0F0FF' }}>Android app</span>. Lock in your founding price today. Your Pro unlock code will be <span style={{ color: '#F0F0FF' }}>emailed to you</span> when we launch.
+            For <span style={{ color: '#F0F0FF' }}>iPhone</span>. Lock in your founding price today. Your Pro unlock code will be <span style={{ color: '#F0F0FF' }}>emailed to you</span> when we launch.
           </motion.p>
 
           {/* Price comparison */}
