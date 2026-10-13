@@ -3,23 +3,25 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Feedstack - Turn Any YouTube Video Into a Daily Habit | Free iOS & Android App',
+  title: 'Feedstack - Free Habit Tracker App for iOS & Android | Build Daily Habits',
   description:
     'Feedstack turns any video or media link into a daily habit reminder with streak tracking. Free on iOS and Android. No ads.',
   keywords: [
     'habit tracker app',
+    'free habit tracker',
     'daily habit reminder',
-    'YouTube habit',
     'streak tracking app',
-    'free habit app',
+    'habit tracker iOS',
+    'habit tracker Android',
     'free habit app iOS',
     'free habit app Android',
     'morning routine app',
     'build daily habits',
+    'YouTube habit tracker',
     'habit building app',
   ],
   openGraph: {
-    title: 'Feedstack - Turn Any YouTube Video Into a Daily Habit | Free iOS & Android App',
+    title: 'Feedstack - Free Habit Tracker App for iOS & Android | Build Daily Habits',
     description:
       'Feedstack turns any video or media link into a daily habit reminder with streak tracking. Free on iOS and Android. No ads.',
     url: 'https://feed-stack.com',
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Feedstack - Turn Any YouTube Video Into a Daily Habit',
+    title: 'Feedstack - Free Habit Tracker App for iOS & Android',
     description:
       'Feedstack turns any video or media link into a daily habit reminder with streak tracking. Free on iOS and Android. No ads.',
     images: ['https://feed-stack.com/og-image.png'],
