@@ -1,12 +1,50 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { AppIcon, AppStoreLogo } from '../components/Navbar'
 import Link from 'next/link'
 
-const REDEEM_URL = 'https://apps.apple.com/redeem?ctx=offercodes&id=6787473480&code=EARLYBIRD30'
+function isIOS() {
+  if (typeof navigator === 'undefined') return false
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent)
+}
 
 export default function RedeemPage() {
+  const [code, setCode] = useState('')
+  const [error, setError] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [submittedCode, setSubmittedCode] = useState('')
+  const [onIOS, setOnIOS] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  useEffect(() => {
+    setOnIOS(isIOS())
+    const params = new URLSearchParams(window.location.search)
+    const prefill = params.get('code')
+    if (prefill) setCode(prefill.trim())
+  }, [])
+
+  function handleRedeem() {
+    const trimmed = code.trim()
+    if (!/^[a-zA-Z0-9]{8,20}$/.test(trimmed)) {
+      setError("That code doesn't look right. Check it and try again.")
+      return
+    }
+    setError('')
+    setSubmittedCode(trimmed)
+    setSubmitted(true)
+    if (onIOS) {
+      window.location.href = `https://apps.apple.com/redeem?ctx=offercodes&id=6787473480&code=${encodeURIComponent(trimmed)}`
+    }
+  }
+
+  function copyCode() {
+    navigator.clipboard.writeText(submittedCode)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2500)
+  }
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -71,7 +109,7 @@ export default function RedeemPage() {
             className="font-extrabold mb-3"
             style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: 'clamp(28px, 5vw, 42px)', lineHeight: 1.1 }}
           >
-            Claim your free
+            Redeem your
             <br />
             <span
               style={{
@@ -81,7 +119,7 @@ export default function RedeemPage() {
                 backgroundClip: 'text',
               }}
             >
-              Pro upgrade
+              Pro code
             </span>
           </motion.h1>
 
@@ -89,42 +127,121 @@ export default function RedeemPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.22, duration: 0.5 }}
-            className="mb-10"
+            className="mb-8"
             style={{ color: '#888899', fontSize: '16px', maxWidth: '340px', lineHeight: 1.6 }}
           >
-            Tap the button below to redeem your offer code and unlock Feedstack Pro on iOS.
+            Enter your code below to unlock Feedstack Pro on iOS.
           </motion.p>
 
-          {/* CTA */}
-          <motion.a
+          {/* Input + button */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.32, duration: 0.55 }}
-            href={REDEEM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full max-w-sm inline-flex items-center justify-center gap-3 rounded-2xl py-4 font-bold text-lg transition-all duration-200 hover:-translate-y-0.5"
-            style={{
-              fontFamily: 'Space Grotesk, sans-serif',
-              background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
-              color: '#F0F0FF',
-              boxShadow: '0 4px 28px rgba(108,99,255,0.4)',
-              textDecoration: 'none',
-            }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="w-full flex flex-col gap-3"
           >
-            <AppStoreLogo size={22} />
-            Claim Code on iOS
-          </motion.a>
+            <input
+              type="text"
+              value={code}
+              onChange={e => { setCode(e.target.value); setError(''); setSubmitted(false) }}
+              onKeyDown={e => e.key === 'Enter' && handleRedeem()}
+              placeholder="Enter your code"
+              maxLength={20}
+              className="w-full rounded-2xl px-5 py-4 text-base font-medium outline-none transition-all duration-200"
+              style={{
+                background: '#111118',
+                border: error ? '1px solid rgba(239,68,68,0.5)' : '1px solid rgba(108,99,255,0.2)',
+                color: '#F0F0FF',
+                fontFamily: 'Space Grotesk, sans-serif',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}
+              autoCapitalize="characters"
+              autoCorrect="off"
+              spellCheck={false}
+            />
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.45, duration: 0.5 }}
-            className="mt-4 text-xs"
-            style={{ color: '#555566' }}
-          >
-            Opens the App Store redemption page
-          </motion.p>
+            <AnimatePresence>
+              {error && (
+                <motion.p
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="text-sm text-left px-1"
+                  style={{ color: '#ef4444' }}
+                >
+                  {error}
+                </motion.p>
+              )}
+            </AnimatePresence>
+
+            <button
+              onClick={handleRedeem}
+              className="w-full inline-flex items-center justify-center gap-3 rounded-2xl py-4 font-bold text-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+              style={{
+                fontFamily: 'Space Grotesk, sans-serif',
+                background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
+                color: '#F0F0FF',
+                boxShadow: '0 4px 28px rgba(108,99,255,0.4)',
+              }}
+            >
+              <AppStoreLogo size={22} />
+              Claim Code on iOS
+            </button>
+          </motion.div>
+
+          {/* Post-submit state */}
+          <AnimatePresence>
+            {submitted && (
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="w-full mt-6 rounded-2xl p-5 text-left"
+                style={{ background: '#111118', border: '1px solid rgba(108,99,255,0.2)' }}
+              >
+                {!onIOS ? (
+                  <>
+                    <p className="font-semibold mb-1" style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>
+                      Open this page on your iPhone to redeem your code.
+                    </p>
+                    <p className="text-sm mb-4" style={{ color: '#888899' }}>
+                      Android codes are coming soon.
+                    </p>
+                  </>
+                ) : (
+                  <p className="text-sm mb-4" style={{ color: '#888899' }}>
+                    If the App Store did not open, go to the App Store, tap your profile picture, choose <span style={{ color: '#F0F0FF' }}>Redeem Gift Card or Code</span>, and enter this code.
+                  </p>
+                )}
+
+                {/* Code display + copy */}
+                <div
+                  className="flex items-center gap-3 rounded-xl px-4 py-3"
+                  style={{ background: '#0A0A0F', border: '1px solid rgba(108,99,255,0.2)' }}
+                >
+                  <span
+                    className="flex-1 font-bold tracking-widest text-base"
+                    style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}
+                  >
+                    {submittedCode}
+                  </span>
+                  <button
+                    onClick={copyCode}
+                    className="shrink-0 text-sm font-semibold rounded-lg px-4 py-2 transition-all duration-200"
+                    style={{
+                      background: copied ? 'rgba(62,207,142,0.15)' : 'rgba(108,99,255,0.15)',
+                      border: copied ? '1px solid rgba(62,207,142,0.3)' : '1px solid rgba(108,99,255,0.3)',
+                      color: copied ? '#3ecf8e' : '#6C63FF',
+                      fontFamily: 'Space Grotesk, sans-serif',
+                    }}
+                  >
+                    {copied ? 'Copied!' : 'Copy'}
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
         </div>
       </main>
