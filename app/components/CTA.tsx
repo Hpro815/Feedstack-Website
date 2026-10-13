@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { AppStoreLogo } from './Navbar'
 
+const APP_STORE_URL = 'https://apps.apple.com/us/app/feedstack-habit-tracker/id6787473480'
 const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.feedstack.app'
 
@@ -106,6 +108,22 @@ export default function CTA() {
                 <path d="M3.18 23.76a2 2 0 0 0 2.82.04l.04-.04 10.2-10.2-2.82-2.83L3.18 20.97a2 2 0 0 0 0 2.79zm15.79-13.44-2.6-1.5-3.18 3.18 3.18 3.18 2.62-1.52a2.27 2.27 0 0 0 0-3.34zM1.93 1.25a1.99 1.99 0 0 0-.68 1.5V21.3l.03.2 10.1-10.1L1.93 1.24zm4.29-.06 10.32 5.95-2.82 2.82-7.5-8.77z" />
               </svg>
               Download Free on Android
+            </a>
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 text-lg font-semibold rounded-2xl px-6 py-3 transition-all duration-200 hover:-translate-y-px"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.14)',
+                color: '#F0F0FF',
+                fontFamily: 'Space Grotesk, sans-serif',
+              }}
+              aria-label="Download Feedstack on the App Store"
+            >
+              <AppStoreLogo size={22} />
+              Get it on iOS
             </a>
           </div>
 

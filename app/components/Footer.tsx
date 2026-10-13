@@ -1,10 +1,10 @@
 'use client'
 
-import { AppIcon } from './Navbar'
+import { AppIcon, AppStoreLogo } from './Navbar'
 import { GooglePlayLogo } from './Hero'
 
-const PLAY_STORE_URL =
-  'https://play.google.com/store/apps/details?id=com.feedstack.app'
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.feedstack.app'
+const APP_STORE_URL = 'https://apps.apple.com/us/app/feedstack-habit-tracker/id6787473480'
 
 export default function Footer() {
   return (
@@ -33,22 +33,40 @@ export default function Footer() {
               The free habit tracker app that turns any YouTube video or X post into
               a daily habit reminder with streak tracking. No account. No ads.
             </p>
-            <a
-              href={PLAY_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold rounded-xl px-4 py-2.5 transition-all duration-200 hover:-translate-y-px"
-              style={{
-                background: 'rgba(108,99,255,0.12)',
-                border: '1px solid rgba(108,99,255,0.25)',
-                color: '#F0F0FF',
-                fontFamily: 'Space Grotesk, sans-serif',
-              }}
-              aria-label="Get Feedstack on Google Play"
-            >
-              <GooglePlayLogo size={16} />
-              Get on Google Play
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold rounded-xl px-4 py-2.5 transition-all duration-200 hover:-translate-y-px"
+                style={{
+                  background: 'rgba(108,99,255,0.12)',
+                  border: '1px solid rgba(108,99,255,0.25)',
+                  color: '#F0F0FF',
+                  fontFamily: 'Space Grotesk, sans-serif',
+                }}
+                aria-label="Get Feedstack on Google Play"
+              >
+                <GooglePlayLogo size={16} />
+                Get on Google Play
+              </a>
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold rounded-xl px-4 py-2.5 transition-all duration-200 hover:-translate-y-px"
+                style={{
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.14)',
+                  color: '#F0F0FF',
+                  fontFamily: 'Space Grotesk, sans-serif',
+                }}
+                aria-label="Get Feedstack on the App Store"
+              >
+                <AppStoreLogo size={16} />
+                Get on iOS
+              </a>
+            </div>
           </div>
 
           {/* App */}
