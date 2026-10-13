@@ -57,16 +57,19 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/waitlist"
-            className="text-sm font-semibold rounded-xl px-4 py-2 transition-all duration-200 hover:-translate-y-px"
+            href="https://apps.apple.com/us/app/feedstack-habit-tracker/id6787473480"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold rounded-xl px-4 py-2 transition-all duration-200 hover:-translate-y-px"
             style={{
-              background: 'rgba(62,207,142,0.12)',
-              border: '1px solid rgba(62,207,142,0.25)',
-              color: '#3ecf8e',
+              background: 'rgba(255,255,255,0.06)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              color: '#F0F0FF',
               fontFamily: 'Space Grotesk, sans-serif',
             }}
           >
-            Join Waitlist
+            <AppStoreLogo size={14} />
+            Get on iOS
           </a>
         </div>
 
@@ -107,7 +110,6 @@ export default function Navbar() {
             { label: 'How it works', href: '#how-it-works' },
             { label: 'Why Feedstack', href: '#why-feedstack' },
             { label: 'Reviews', href: '#reviews' },
-            { label: 'Join Waitlist', href: '/waitlist' },
           ].map((link) => (
             <a
               key={link.href}
@@ -119,16 +121,19 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/waitlist"
+            href="https://apps.apple.com/us/app/feedstack-habit-tracker/id6787473480"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             className="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors mt-2"
             style={{
-              background: 'rgba(62,207,142,0.12)',
-              border: '1px solid rgba(62,207,142,0.25)',
-              color: '#3ecf8e',
+              background: 'rgba(255,255,255,0.06)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              color: '#F0F0FF',
             }}
           >
-            Join Waitlist
+            <AppStoreLogo size={14} />
+            Get on iOS
           </a>
         </motion.div>
       )}

@@ -18,5 +18,5 @@ export default async function RefPage({ params }: { params: { code: string } }) 
       .eq('code', params.code)
   }
 
-  redirect('/waitlist')
+  redirect('https://apps.apple.com/us/app/feedstack-habit-tracker/id6787473480')
 }

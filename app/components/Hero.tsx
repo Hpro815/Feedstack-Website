@@ -52,82 +52,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-4xl mx-auto">
 
-        {/* Pricing banner + arrow */}
-        <motion.div
-          custom={0}
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          className="inline-flex items-center justify-center gap-3 mb-8"
-          style={{ position: 'relative' }}
-        >
-          <div
-            className="inline-flex flex-col items-center gap-2 rounded-2xl px-6 py-4"
-            style={{
-              background: 'rgba(108,99,255,0.1)',
-              border: '1px solid rgba(108,99,255,0.25)',
-              fontFamily: 'Space Grotesk, sans-serif',
-            }}
-          >
-          <div className="inline-flex items-center gap-3">
-            <span style={{ color: '#888899', fontSize: '15px' }}>Lifetime Pro</span>
-            <span style={{ fontSize: '22px', fontWeight: 800, color: '#555566', textDecoration: 'line-through' }}>
-              $25
-            </span>
-            <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
-              <path d="M1 6h15M12 2l4 4-4 4" stroke="#6C63FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span
-              style={{
-                fontSize: '26px',
-                fontWeight: 900,
-                background: 'linear-gradient(135deg, #6C63FF 0%, #3ecf8e 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
-              $14.99
-            </span>
-            <span
-              style={{
-                background: 'rgba(62,207,142,0.15)',
-                border: '1px solid rgba(62,207,142,0.3)',
-                color: '#3ecf8e',
-                fontSize: '12px',
-                fontWeight: 700,
-                borderRadius: '6px',
-                padding: '2px 8px',
-                letterSpacing: '0.05em',
-              }}
-            >
-              60% OFF
-            </span>
-            <div style={{ width: '1px', height: '24px', background: 'rgba(108,99,255,0.3)' }} />
-            <a
-              href="/waitlist"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:opacity-80"
-              style={{
-                background: 'linear-gradient(135deg, #6C63FF 0%, #5a52e8 100%)',
-                color: '#F0F0FF',
-                borderRadius: '10px',
-                padding: '6px 14px',
-                textDecoration: 'none',
-              }}
-            >
-              Claim 60% off
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-                <path d="M2.5 6.5h8M7 3.5l3 3-3 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          </div>
-          <p style={{ fontSize: '11px', color: '#6b6b80', fontFamily: 'Inter, sans-serif', margin: 0 }}>
-            * The 60% off offer is for the iOS app only
-          </p>
-          </div>
-
-        </motion.div>
-
         {/* H1 */}
         <motion.h1
           custom={0}
@@ -204,7 +128,9 @@ export default function Hero() {
             Free on Android
           </a>
           <a
-            href="/waitlist"
+            href="https://apps.apple.com/us/app/feedstack-habit-tracker/id6787473480"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 text-base font-semibold rounded-2xl px-6 py-3 transition-all duration-200 hover:-translate-y-px"
             style={{
               background: 'rgba(255,255,255,0.06)',
@@ -213,7 +139,7 @@ export default function Hero() {
               fontFamily: 'Space Grotesk, sans-serif',
               minWidth: '210px',
             }}
-            aria-label="Join waitlist for iOS"
+            aria-label="Download Feedstack on the App Store"
           >
             <AppStoreLogo size={20} />
             Get it on iOS

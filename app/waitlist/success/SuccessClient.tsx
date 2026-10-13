@@ -90,7 +90,7 @@ export default function SuccessClient({ code, email }: { code: string; email: st
               Share with friends
             </p>
             <p className="text-sm mb-5" style={{ color: '#888899' }}>
-              Send them your link — they get the same 60% off deal.
+              Send them your link to check out Feedstack.
             </p>
 
             {/* Referral link box */}
@@ -121,7 +121,7 @@ export default function SuccessClient({ code, email }: { code: string; email: st
             {/* Share buttons */}
             <div className="flex gap-3 justify-center">
               <a
-                href={`https://twitter.com/intent/tweet?text=I%20just%20locked%20in%20Feedstack%20Pro%20at%2060%25%20off%20before%20launch%20%F0%9F%94%A5%20You%20can%20too%3A&url=${encodeURIComponent(referralUrl)}`}
+                href={`https://twitter.com/intent/tweet?text=Check%20out%20Feedstack%20%F0%9F%94%A5%20The%20habit%20tracker%20that%20turns%20YouTube%20videos%20into%20daily%20habits%3A&url=${encodeURIComponent(referralUrl)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold rounded-xl px-4 py-2.5 transition-all duration-200 hover:-translate-y-px"
@@ -139,7 +139,7 @@ export default function SuccessClient({ code, email }: { code: string; email: st
                 Share on X
               </a>
               <a
-                href={`https://wa.me/?text=I%20just%20locked%20in%20Feedstack%20Pro%20at%2060%25%20off%20before%20launch%20%F0%9F%94%A5%20You%20can%20too%3A%20${encodeURIComponent(referralUrl)}`}
+                href={`https://wa.me/?text=Check%20out%20Feedstack%20%F0%9F%94%A5%20The%20habit%20tracker%20that%20turns%20YouTube%20videos%20into%20daily%20habits%3A%20${encodeURIComponent(referralUrl)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold rounded-xl px-4 py-2.5 transition-all duration-200 hover:-translate-y-px"
