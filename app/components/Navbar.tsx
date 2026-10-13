@@ -57,6 +57,18 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="/redeem"
+            className="text-sm font-semibold rounded-xl px-4 py-2 transition-all duration-200 hover:-translate-y-px"
+            style={{
+              background: 'rgba(62,207,142,0.12)',
+              border: '1px solid rgba(62,207,142,0.25)',
+              color: '#3ecf8e',
+              fontFamily: 'Space Grotesk, sans-serif',
+            }}
+          >
+            Redeem
+          </a>
+          <a
             href={PLAY_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -134,6 +146,19 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/redeem"
+            onClick={() => setMenuOpen(false)}
+            className="text-sm font-semibold rounded-xl px-4 py-2.5 text-center transition-colors"
+            style={{
+              background: 'rgba(62,207,142,0.12)',
+              border: '1px solid rgba(62,207,142,0.25)',
+              color: '#3ecf8e',
+              fontFamily: 'Space Grotesk, sans-serif',
+            }}
+          >
+            Redeem
+          </a>
           <div className="flex gap-3 mt-2">
             <a
               href={PLAY_STORE_URL}
