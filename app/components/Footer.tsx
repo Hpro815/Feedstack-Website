@@ -132,7 +132,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(108,99,255,0.1)' }}
         >
           <p className="text-xs" style={{ color: '#888899', fontFamily: 'Inter, sans-serif' }}>
-            &copy; {new Date().getFullYear()} Feedstack. Free habit tracker app for Android.
+            &copy; {new Date().getFullYear()} Feedstack. Free habit tracker app for Android &amp; iOS.
           </p>
           <p className="text-xs" style={{ color: '#888899', fontFamily: 'Inter, sans-serif' }}>
             Built for people who actually want to{' '}
