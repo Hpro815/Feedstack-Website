@@ -71,7 +71,15 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Feedstack',
+              url: 'https://feed-stack.com',
+              description: 'Feedstack turns any video or media link into a daily habit reminder with streak tracking. Free on iOS and Android. No ads.',
+            },
+            {
               '@context': 'https://schema.org',
               '@type': 'MobileApplication',
               name: 'Feedstack',
@@ -94,7 +102,7 @@ export default function RootLayout({
                 name: 'Feedstack',
                 url: 'https://feed-stack.com',
               },
-            }),
+            }]),
           }}
         />
       </head>
