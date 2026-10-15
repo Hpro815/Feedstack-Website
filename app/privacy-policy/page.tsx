@@ -5,9 +5,9 @@ import Footer from '../components/Footer'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Feedstack',
   description:
-    'Read the Feedstack privacy policy to learn what information is collected on our website and app, and how it is used.',
+    'Read the Feedstack privacy policy to learn what information is collected on our app and website, and how it is used.',
   alternates: {
-    canonical: 'https://feedstack.app/privacy-policy',
+    canonical: 'https://feed-stack.com/privacy-policy',
   },
   robots: {
     index: true,
@@ -15,205 +15,114 @@ export const metadata: Metadata = {
   },
 }
 
-const sectionHeading = 'text-xl md:text-2xl font-bold mb-4 mt-12'
-const subHeading = 'text-base font-semibold mt-6 mb-2'
-const paragraph = 'text-sm md:text-base leading-relaxed mb-4'
-const listItem = 'text-sm md:text-base leading-relaxed'
-const linkStyle = { color: '#8A82FF' }
+const h2 = 'text-xl md:text-2xl font-bold mb-4 mt-12'
+const p = 'text-sm md:text-base leading-relaxed mb-4'
+const ul = 'list-disc list-inside text-sm md:text-base leading-relaxed mb-4 space-y-1 pl-2'
 
-export default function PrivacyPolicyPage() {
+export default function PrivacyPolicy() {
   return (
-    <main>
+    <>
       <Navbar />
-      <section className="pt-32 pb-24 px-6">
-        <div className="max-w-3xl mx-auto">
-          <h1
-            className="text-3xl md:text-4xl font-bold mb-2 text-[#F0F0FF]"
-            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
-          >
-            Feedstack Privacy Policy
-          </h1>
-          <p className="text-sm mb-10" style={{ color: '#888899', fontFamily: 'Inter, sans-serif' }}>
-            Last updated: July 2026
-          </p>
+      <main
+        className="max-w-3xl mx-auto px-6 pt-32 pb-24"
+        style={{ color: '#C8C8D8', fontFamily: 'Inter, sans-serif' }}
+      >
+        <h1
+          className="text-3xl md:text-4xl font-extrabold mb-3"
+          style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}
+        >
+          Privacy Policy
+        </h1>
+        <p className="text-sm mb-10" style={{ color: '#888899' }}>Last updated: October 2026</p>
 
-          <div style={{ color: '#B8B8C8', fontFamily: 'Inter, sans-serif' }}>
-            <p className={paragraph}>
-              Feedstack ("we", "our", "the app") is built with privacy as a core principle. This
-              policy explains what data the app does and does not collect.
-            </p>
+        <p className={p}>
+          Feedstack ("we", "our", "the app") is built to collect as little data as possible. This policy explains what the app does and does not collect.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Our Core Commitment
-            </h2>
-            <p className={paragraph}>
-              Feedstack does not require an account, does not collect personal data, and does not
-              use advertising. The habits, links, streaks, and reminders you create are stored
-              locally on your device.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Summary</h2>
+        <p className={p}>
+          Feedstack does not require an account and does not show ads. The habits, links, reminders and streak history you create are stored on your device. We collect anonymous usage data to understand how the app is used and to fix problems. If you use Streak Buddies, a username and streak counts are stored on our servers.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Information We Do Not Collect
-            </h2>
-            <p className={paragraph}>We do not collect, store, or have access to:</p>
-            <ul className="list-disc pl-5 flex flex-col gap-2 mb-4">
-              <li className={listItem}>Your name, email address, or contact information</li>
-              <li className={listItem}>The content of the links you save as habits</li>
-              <li className={listItem}>Your habit history, streaks, or completion data</li>
-              <li className={listItem}>Your location</li>
-              <li className={listItem}>Your browsing activity outside the app</li>
-              <li className={listItem}>Any biometric or health data</li>
-            </ul>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Information We Do Not Collect</h2>
+        <p className={p}>We do not collect, store, or have access to:</p>
+        <ul className={ul}>
+          <li>Your name, email address, or phone number (except the optional waitlist email described below)</li>
+          <li>The links you save as habits</li>
+          <li>Your habit names, categories, or reminder times</li>
+          <li>Your location</li>
+          <li>Your browsing activity outside the app</li>
+          <li>Any biometric or health data</li>
+        </ul>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Information Stored On Your Device
-            </h2>
-            <p className={paragraph}>
-              The following information is stored locally on your device only, and is never
-              transmitted to us:
-            </p>
-            <ul className="list-disc pl-5 flex flex-col gap-2 mb-4">
-              <li className={listItem}>
-                The links (YouTube, TikTok, Instagram, X, Reddit, Spotify, articles, or any other
-                URL) you add as habits
-              </li>
-              <li className={listItem}>Habit names, categories, and reminder times you set</li>
-              <li className={listItem}>Your streak history and completion records</li>
-              <li className={listItem}>Your app preferences and settings</li>
-            </ul>
-            <p className={paragraph}>
-              If you delete the app, this data is permanently removed from your device.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Information Stored On Your Device</h2>
+        <p className={p}>The following stays on your device and is not sent to us:</p>
+        <ul className={ul}>
+          <li>The links (YouTube, TikTok, Instagram, X, Reddit, Spotify, articles, or any other URL) you add as habits</li>
+          <li>Habit names, categories, and reminder times</li>
+          <li>Your full streak history and completion records</li>
+          <li>Your app preferences and settings</li>
+        </ul>
+        <p className={p}>If you delete the app, this data is permanently removed from your device.</p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Optional Features That Involve Data Sharing
-            </h2>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Anonymous Usage Data</h2>
+        <p className={p}>
+          We use PostHog to collect anonymous usage events, such as which screens are opened and which features are used. These events are tied to a random identifier generated by the app, not to your name, email, or account. We use this data only to improve Feedstack. We do not sell it and we do not use it for advertising. You can read PostHog's privacy policy at{' '}
+          <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#6C63FF' }}>posthog.com/privacy</a>.
+        </p>
 
-            <h3 className={subHeading} style={{ color: '#F0F0FF' }}>
-              Streak Buddies
-            </h3>
-            <p className={paragraph}>
-              If you choose to use the Streak Buddies feature, you create a username, and this
-              username along with the streak count for habits you choose to share becomes visible
-              to the specific person you connect with. No other personal data is shared through
-              this feature. You can stop using this feature at any time in Settings.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Streak Buddies and Challenges</h2>
+        <p className={p}>
+          If you use Streak Buddies, you choose a username. Your username and the streak counts of the habits you choose to share are stored on our servers so the people you connect with can see them. Challenge and badge progress that you share through these features is stored the same way. No other personal data is shared through these features. You can stop using them at any time in Settings, and you can ask us to delete your username and shared data by email.
+        </p>
 
-            <h3 className={subHeading} style={{ color: '#F0F0FF' }}>
-              Waitlist and Email Communications
-            </h3>
-            <p className={paragraph}>
-              If you sign up for our waitlist on feed-stack.com, we collect your email address
-              solely to send you launch updates and, if applicable, a discount code. You can
-              unsubscribe at any time using the link in any email we send.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Waitlist and Email</h2>
+        <p className={p}>
+          If you sign up for our waitlist on feed-stack.com, we collect your email address only to send you launch updates and, if applicable, a discount code. You can unsubscribe with the link in any email we send.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Third-Party Services
-            </h2>
-            <p className={paragraph}>
-              Feedstack uses the following third-party services strictly for their intended
-              purpose:
-            </p>
-            <ul className="list-disc pl-5 flex flex-col gap-2 mb-4">
-              <li className={listItem}>
-                <strong>RevenueCat</strong>, to manage subscription purchases. RevenueCat receives
-                your device's purchase transaction data as required by Apple and Google to
-                validate purchases. See RevenueCat's privacy policy at{' '}
-                <a
-                  href="https://www.revenuecat.com/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                  style={linkStyle}
-                >
-                  revenuecat.com/privacy
-                </a>{' '}
-                for details.
-              </li>
-              <li className={listItem}>
-                <strong>Apple App Store and Google Play</strong>, to process payments for Pro
-                subscriptions and the Lifetime deal. We do not have access to your payment card
-                details at any point.
-              </li>
-            </ul>
-            <p className={paragraph}>
-              We do not use third-party advertising networks, analytics trackers, or data brokers
-              of any kind.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Third-Party Services</h2>
+        <p className={p}>Feedstack uses these services only for the purpose described:</p>
+        <ul className={ul}>
+          <li><strong style={{ color: '#F0F0FF' }}>PostHog</strong>, for anonymous usage analytics.</li>
+          <li><strong style={{ color: '#F0F0FF' }}>Supabase</strong>, to store Streak Buddies and challenge data.</li>
+          <li><strong style={{ color: '#F0F0FF' }}>RevenueCat</strong>, to manage subscriptions and purchases. RevenueCat receives your purchase transaction data as required by Apple and Google to validate purchases. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: '#6C63FF' }}>revenuecat.com/privacy</a>.</li>
+          <li><strong style={{ color: '#F0F0FF' }}>Resend</strong>, to send waitlist emails.</li>
+          <li><strong style={{ color: '#F0F0FF' }}>Apple App Store and Google Play</strong>, to process payments for Pro subscriptions and the Lifetime purchase. We never have access to your payment card details.</li>
+        </ul>
+        <p className={p}>We do not use advertising networks or data brokers, and we do not sell your data.</p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              No Advertising
-            </h2>
-            <p className={paragraph}>
-              Feedstack does not display ads and does not share any data with advertising
-              networks.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Your Choices and Rights</h2>
+        <p className={p}>
+          We hold very little personal data. If you want your username and shared Streak Buddies data deleted, or your waitlist email removed, email us at the address below and we will delete it promptly. You can unsubscribe from emails at any time.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Children's Privacy
-            </h2>
-            <p className={paragraph}>
-              Feedstack is not directed at children under 13, and we do not knowingly collect any
-              information from children.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Children's Privacy</h2>
+        <p className={p}>
+          Feedstack is not directed at children under 13, and we do not knowingly collect information from children.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Data Security
-            </h2>
-            <p className={paragraph}>
-              Because your habit data stays on your device rather than on our servers, there is no
-              central database of user habit data that could be exposed in a breach. Purchase and
-              subscription data is handled securely by Apple, Google, and RevenueCat in accordance
-              with their own security standards.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Data Security</h2>
+        <p className={p}>
+          Most of your data stays on your device, so there is no central database of your habits that could be exposed. Data we do store (usernames, shared streak counts, analytics events) is held by Supabase and PostHog under their own security standards. Purchase data is handled by Apple, Google, and RevenueCat under theirs.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Your Rights
-            </h2>
-            <p className={paragraph}>
-              Since we do not hold personal data beyond an optional waitlist email address, there
-              is little for us to access, correct, or delete on your behalf. If you signed up for
-              the waitlist and want your email removed, contact us using the details below and we
-              will delete it promptly.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Changes to This Policy</h2>
+        <p className={p}>
+          If this policy changes, we will update the "Last updated" date at the top of this page. If you keep using the app after a change is posted, you accept the updated policy.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Changes to This Policy
-            </h2>
-            <p className={paragraph}>
-              If this policy changes, we will update the "Last updated" date at the top of this
-              page. Continued use of the app after changes are posted constitutes acceptance of
-              the updated policy.
-            </p>
+        <h2 className={h2} style={{ color: '#F0F0FF', fontFamily: 'Space Grotesk, sans-serif' }}>Contact Us</h2>
+        <p className={p}>
+          If you have any questions about this privacy policy, contact us at{' '}
+          <a href="mailto:feedstack84@gmail.com" style={{ color: '#6C63FF' }}>feedstack84@gmail.com</a>.
+        </p>
 
-            <h2 className={sectionHeading} style={{ color: '#F0F0FF' }}>
-              Contact Us
-            </h2>
-            <p className={paragraph}>
-              If you have any questions about this privacy policy, contact us at:
-            </p>
-            <p className={paragraph}>
-              <a
-                href="mailto:feedstack84@gmail.com"
-                className="underline font-semibold"
-                style={{ color: '#8A82FF' }}
-              >
-                feedstack84@gmail.com
-              </a>
-            </p>
-
-            <div className="pt-8 mt-8" style={{ borderTop: '1px solid rgba(108,99,255,0.12)' }}>
-              <p className="text-sm italic" style={{ color: '#888899' }}>
-                Feedstack. Turn any link into a daily habit.
-                <br />
-                feed-stack.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        <p className="text-sm mt-16" style={{ color: '#555566' }}>
+          Feedstack. Turn any link into a daily habit. — <a href="https://feed-stack.com" style={{ color: '#6C63FF' }}>feed-stack.com</a>
+        </p>
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
